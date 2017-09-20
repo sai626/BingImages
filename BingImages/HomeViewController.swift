@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UITableViewController {
     
-    let data = TestData()
+    let data = TestData2()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,6 +16,7 @@
 		3A418C7F1F6FD5F90066AE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A418C7D1F6FD5F90066AE76 /* LaunchScreen.storyboard */; };
 		3A418C881F6FDE240066AE76 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A418C871F6FDE240066AE76 /* ImageCell.xib */; };
 		3A418C8A1F6FE4950066AE76 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A418C891F6FE4950066AE76 /* ImageCell.swift */; };
+		3A686D491F72630600449C64 /* TestData2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A686D481F72630600449C64 /* TestData2.swift */; };
 		3A771D6D1F70E4FC00EC8469 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D6C1F70E4FC00EC8469 /* UIImageView+DownloadImage.swift */; };
 		3A771D701F70FBC500EC8469 /* ImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D6F1F70FBC500EC8469 /* ImageResult.swift */; };
 		3A771D721F70FEDF00EC8469 /* NSDate+stringParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D711F70FEDF00EC8469 /* NSDate+stringParse.swift */; };
@@ -35,6 +36,7 @@
 		3A418C801F6FD5F90066AE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A418C871F6FDE240066AE76 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		3A418C891F6FE4950066AE76 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		3A686D481F72630600449C64 /* TestData2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData2.swift; sourceTree = "<group>"; };
 		3A771D6C1F70E4FC00EC8469 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		3A771D6F1F70FBC500EC8469 /* ImageResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResult.swift; sourceTree = "<group>"; };
 		3A771D711F70FEDF00EC8469 /* NSDate+stringParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+stringParse.swift"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				3A771D6F1F70FBC500EC8469 /* ImageResult.swift */,
 				3A771D751F712B1800EC8469 /* TestData.swift */,
+				3A686D481F72630600449C64 /* TestData2.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A686D491F72630600449C64 /* TestData2.swift in Sources */,
 				3A771D761F712B1800EC8469 /* TestData.swift in Sources */,
 				3A418C771F6FD5F90066AE76 /* SecondViewController.swift in Sources */,
 				3A771D701F70FBC500EC8469 /* ImageResult.swift in Sources */,

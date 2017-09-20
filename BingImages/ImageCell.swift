@@ -24,13 +24,13 @@ class ImageCell: UITableViewCell {
         print("Requesting image of index \(index!)")
         request = Alamofire.request(.GET, url).responseImage {
             [weak self] response in
-            /*
+            
             debugPrint(response)
                 
             print(response.request)
             print(response.response)
             debugPrint(response.result)
- */
+ 
              
             if let image = response.result.value, strongSelf = self {
                 strongSelf.imageViewer.image = image

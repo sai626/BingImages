@@ -15,45 +15,45 @@ class TestData {
     func initialize() {
         let row1 = ImageResult()
         row1.name = "Test 0"
-        row1.url = NSURL(string: "http://www.bing.com/cr?IG=0BC9BA4FB1314CE2BD7449B5B8D32381&CID=0A0CAEF8C3B867871534A5FAC27866CC&rd=1&h=n-d6T2QaUiTwWu40iqD6C0BOpQuS4kupSm67whytuws&v=1&r=http%3a%2f%2fbeautifulcoolwallpapers.files.wordpress.com%2f2011%2f07%2fnature-wallpaper.jpg&p=DevEx,5009.1")
-        row1.height = 768
-        row1.width = 1024
+        row1.url = NSURL(string: "https://www.bing.com/cr?IG=1CAFD5814FB94AF39827899BB453C71B&CID=2DB655174DBC61A800AB5E144C7C60D3&rd=1&h=1swxeCoemXYd9LjaeAyH-vmUcqZo7WEtZ5PlUgK1Ey0&v=1&r=https%3a%2f%2fc1.staticflickr.com%2f8%2f7694%2f17158667357_38d8a99341_n.jpg&p=DevEx,5009.1")
+        row1.height = 240
+        row1.width = 204
         row1.imageSizeCalc()
         row1.accentColor = UIColor(red: 0.2, green: 0.9, blue: 0.5, alpha: 1)
         images.append(row1)
         
         let row2 = ImageResult()
         row2.name = "Test 1"
-        row2.url = NSURL(string: "https://www.bing.com/cr?IG=0BC9BA4FB1314CE2BD7449B5B8D32381&CID=0A0CAEF8C3B867871534A5FAC27866CC&rd=1&h=zeNsUo0YFocQe-dC3rvNj16AKe7qht4zzokSJxoo31o&v=1&r=https%3a%2f%2fwww.bing.com%2fimages%2fsearch%3fview%3ddetailv2%26FORM%3dOIIRPO%26q%3dnature%2bwallpapers%26id%3dCA4196EB999A2EF66FB4C32753012D309B1A8690%26simid%3d608047528399210683&p=DevEx,5013.1")
-        row2.height = 900
-        row2.width = 1600
+        row2.url = NSURL(string: "https://www.bing.com/cr?IG=1CAFD5814FB94AF39827899BB453C71B&CID=2DB655174DBC61A800AB5E144C7C60D3&rd=1&h=YvW9k5-r59O9xGsjsLgpmWvTeh8-mf61Xz-46PieuZU&v=1&r=https%3a%2f%2fstatic.pexels.com%2fusers%2favatars%2f148853%2fmitchell-cizmas-224-medium.jpeg&p=DevEx,5015.1")
+        row2.height = 200
+        row2.width = 200
         row2.imageSizeCalc()
         row1.accentColor = UIColor(red: 0.5, green: 0.2, blue: 0.1, alpha: 1)
         images.append(row2)
         
         let row3 = ImageResult()
         row3.name = "Test 2"
-        row3.url = NSURL(string: "https://www.bing.com/cr?IG=0BC9BA4FB1314CE2BD7449B5B8D32381&CID=0A0CAEF8C3B867871534A5FAC27866CC&rd=1&h=nkeRufacDi9xSxG5ffXS6ZmenZAa4wbwatf1nZjs-ak&v=1&r=https%3a%2f%2fwww.bing.com%2fimages%2fsearch%3fview%3ddetailv2%26FORM%3dOIIRPO%26q%3dnature%2bwallpapers%26id%3d928B20B929BAFF230EFEF4C896FE41CE9B3F8FFE%26simid%3d608014049149782010&p=DevEx,5019.1")
-        row3.height = 1080
-        row3.width = 1728
+        row3.url = NSURL(string: "http://www.bing.com/cr?IG=1CAFD5814FB94AF39827899BB453C71B&CID=2DB655174DBC61A800AB5E144C7C60D3&rd=1&h=YIcwGSG0gGzWkE2ajFqvBZlJhd5sGVUS2IHhUZciQM8&v=1&r=http%3a%2f%2fwww.publicdomainpictures.net%2fpictures%2f170000%2ft2%2fabstract-modern-3d-art.jpg&p=DevEx,5021.1")
+        row3.height = 150
+        row3.width = 266
         row3.imageSizeCalc()
         row1.accentColor = UIColor(red: 0.33, green: 0.66, blue: 0.4, alpha: 1)
         images.append(row3)
         
         let row4 = ImageResult()
         row4.name = "Test 3"
-        row4.url = NSURL(string: "https://www.bing.com/cr?IG=0BC9BA4FB1314CE2BD7449B5B8D32381&CID=0A0CAEF8C3B867871534A5FAC27866CC&rd=1&h=J1OdgOcURNbH05VBMylY1a2LO4ZZY2PGrOkfMtOsf1k&v=1&r=https%3a%2f%2fwww.bing.com%2fimages%2fsearch%3fview%3ddetailv2%26FORM%3dOIIRPO%26q%3dnature%2bwallpapers%26id%3d6A35C38FC05270D130ACDA5A8689632A22C9E8B9%26simid%3d608036254089350113&p=DevEx,5025.1")
-        row4.height = 900
-        row4.width = 1600
+        row4.url = NSURL(string: "http://www.bing.com/cr?IG=1CAFD5814FB94AF39827899BB453C71B&CID=2DB655174DBC61A800AB5E144C7C60D3&rd=1&h=6P5QXRsTEzj9gBgbaS-Z_5mLytZgWX8LK_xFJK3TUdM&v=1&r=http%3a%2f%2fimages.clipshrine.com%2fdownload%2fwheel%2fmedium-Volcanic-Frame-0-42125.png&p=DevEx,5027.1")
+        row4.height = 300
+        row4.width = 300
         row4.imageSizeCalc()
         row1.accentColor = UIColor(red: 0.4, green: 0.7, blue: 0.55, alpha: 1)
         images.append(row4)
         
         let row5 = ImageResult()
         row5.name = "Test 4"
-        row5.url = NSURL(string: "https://www.bing.com/cr?IG=0BC9BA4FB1314CE2BD7449B5B8D32381&CID=0A0CAEF8C3B867871534A5FAC27866CC&rd=1&h=a83Fq-a74Osnv1l-bVgM0F8Z4YT5rJjNv9kxO3JtwOM&v=1&r=https%3a%2f%2fwww.bing.com%2fimages%2fsearch%3fview%3ddetailv2%26FORM%3dOIIRPO%26q%3dnature%2bwallpapers%26id%3d3B5ABF4477C69727AF7E4CAE8D8D4E40E175565D%26simid%3d607994133362510166&p=DevEx,5031.1")
-        row5.height = 1440
-        row5.width = 1920
+        row5.url = NSURL(string: "http://www.bing.com/cr?IG=1CAFD5814FB94AF39827899BB453C71B&CID=2DB655174DBC61A800AB5E144C7C60D3&rd=1&h=CZtaOCAIJrlcMbsnoyp2qvzHWlCNbW8PW1q77Igc7GU&v=1&r=http%3a%2f%2fimages.clipshrine.com%2fdownload%2fwheel%2fmedium-Volcanic-Frame-66.6-42125.png&p=DevEx,5033.1")
+        row5.height = 300
+        row5.width = 300
         row5.imageSizeCalc()
         row1.accentColor = UIColor(red: 0.29, green: 0.05, blue: 0.35, alpha: 1)
         images.append(row5)
