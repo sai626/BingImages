@@ -11,20 +11,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-IK-Hb8">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name of Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-IK-Hb8">
                     <rect key="frame" x="20" y="10" width="560" height="20"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-VE-vDC">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-VE-vDC">
                     <rect key="frame" x="20" y="35" width="560" height="17"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-Yi-KxL">
-                    <rect key="frame" x="0.0" y="57" width="600" height="200"/>
+                    <rect key="frame" x="0.0" y="60" width="600" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="7sN-5t-Ihd"/>
                     </constraints>
@@ -34,6 +34,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="bFX-VE-vDC" secondAttribute="trailing" constant="20" id="3QB-9F-auc"/>
                 <constraint firstItem="bFX-VE-vDC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Jwc-De-1bX"/>
+                <constraint firstAttribute="bottom" secondItem="cMT-Yi-KxL" secondAttribute="bottom" constant="5" id="LCn-RQ-cPT"/>
                 <constraint firstItem="3TP-IK-Hb8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="WqH-8r-G8V"/>
                 <constraint firstAttribute="trailing" secondItem="3TP-IK-Hb8" secondAttribute="trailing" constant="20" id="YDx-6b-sKo"/>
                 <constraint firstItem="cMT-Yi-KxL" firstAttribute="top" secondItem="bFX-VE-vDC" secondAttribute="bottom" constant="5" id="ffZ-Bu-vu7"/>

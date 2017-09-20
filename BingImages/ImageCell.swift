@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 import Alamofire
 
-class ImageCell: UITableViewCell {
+class ImageCell: UICollectionViewCell {
     
     @IBOutlet weak var nameOfImage: UILabel!
     @IBOutlet weak var uploadDate: UILabel!
@@ -25,12 +25,11 @@ class ImageCell: UITableViewCell {
         request = Alamofire.request(.GET, url).responseImage {
             [weak self] response in
             
-            debugPrint(response)
-                
+            /*debugPrint(response)
             print(response.request)
             print(response.response)
             debugPrint(response.result)
- 
+            */
              
             if let image = response.result.value, strongSelf = self {
                 strongSelf.imageViewer.image = image
@@ -52,11 +51,11 @@ class ImageCell: UITableViewCell {
         uploadDate.text = nil
         imageViewer.image = nil
         request?.cancel()
+        print("Cancelled image at index \(index!)")
     }
     
     func updateUI(){
         nameOfImage.text = img!.name
-        
         imageViewer.frame = CGRect(x: 0, y: 0, width: (img?.imageWidth)!, height: (img?.imageHeight)!)
         addImage(img!.url!)
     }
