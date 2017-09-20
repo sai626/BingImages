@@ -30,16 +30,14 @@ class HomeViewController: UITableViewController {
         return (data.images.count)
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        print("Cell height \(indexPath.row)")
-        return 257
+        return 57 + data.images[indexPath.row].imageHeight
     }
- */
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("bingCell", forIndexPath: indexPath) as! ImageCell
-        cell.setImage(data.images[indexPath.row])
+        let cell = tableView.dequeueReusableCellWithIdentifier("bingCell") as! ImageCell
+        cell.setImage(data.images[indexPath.row], index: indexPath.row)
         return cell
     }
 }

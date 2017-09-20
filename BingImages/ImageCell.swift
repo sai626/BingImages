@@ -16,11 +16,12 @@ class ImageCell: UITableViewCell {
     @IBOutlet weak var uploadDate: UILabel!
     @IBOutlet weak var imageViewer: UIImageView!
     var img: ImageResult?
-    private let MAX_IMAGE_HEIGHT = CGFloat(200)
-    var cellHeight: CGFloat!
+    
     var request: Request?
+    var index: Int?
     
     func addImage(url: NSURL) {
+        print("Requesting image of index \(index!)")
         request = Alamofire.request(.GET, url).responseImage {
             [weak self] response in
             /*
@@ -33,14 +34,15 @@ class ImageCell: UITableViewCell {
              
             if let image = response.result.value, strongSelf = self {
                 strongSelf.imageViewer.image = image
-                //print("Image Loaded")
+                print("Image Loaded at index \(strongSelf.index!)")
             }
  
         }
     }
     
-    func setImage(img: ImageResult){
+    func setImage(img: ImageResult, index: Int){
         self.img = img
+        self.index = index
         updateUI()
     }
     
@@ -48,22 +50,14 @@ class ImageCell: UITableViewCell {
         img = nil
         nameOfImage.text = nil
         uploadDate.text = nil
+        imageViewer.image = nil
         request?.cancel()
     }
     
     func updateUI(){
         nameOfImage.text = img!.name
         
-        let aspectRatio = CGFloat((img?.height)!)/CGFloat((img?.width)!)
-        var imageWidth = UIScreen.mainScreen().bounds.width
-        var imageHeight = aspectRatio*imageWidth
-        if imageHeight > MAX_IMAGE_HEIGHT {
-            imageHeight = MAX_IMAGE_HEIGHT
-            imageWidth = imageHeight/aspectRatio
-        }
-        print("Height: \(imageHeight)  Width: \(imageWidth)")
-        imageViewer.frame = CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight)
-        cellHeight = 57 + imageHeight
+        imageViewer.frame = CGRect(x: 0, y: 0, width: (img?.imageWidth)!, height: (img?.imageHeight)!)
         addImage(img!.url!)
     }
     

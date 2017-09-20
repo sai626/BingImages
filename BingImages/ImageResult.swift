@@ -23,6 +23,10 @@ class ImageResult{
     var thumbnailHeight: Int?
     var imageSize: Int?
     
+    private let MAX_IMAGE_HEIGHT = CGFloat(200)
+    var imageHeight: CGFloat!
+    var imageWidth: CGFloat!
+    
     func initializeCellData(imageJson: JSON){
         name = imageJson["name"].stringValue
         date = NSDate().dateFromString(imageJson["datePublished"].stringValue)
@@ -54,5 +58,17 @@ class ImageResult{
             let value = sizeString.characters.split(" ").map(String.init)
             imageSize = Int(value[0])
         }
-    }    
+
+    }
+    
+    func imageSizeCalc(){
+        let aspectRatio = CGFloat(height)/CGFloat(width)
+        imageWidth = UIScreen.mainScreen().bounds.width
+        imageHeight = aspectRatio*imageWidth
+        if imageHeight > MAX_IMAGE_HEIGHT {
+            imageHeight = MAX_IMAGE_HEIGHT
+            imageWidth = imageHeight/aspectRatio
+        }
+        print("Height: \(imageHeight)  Width: \(imageWidth)")
+    }
 }
