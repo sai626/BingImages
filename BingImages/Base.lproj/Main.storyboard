@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="HDH-Kc-9bf">
             <objects>
-                <tableViewController id="21J-tj-z8E" customClass="FirstViewController" customModule="BingImages" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="21J-tj-z8E" customClass="HomeViewController" customModule="BingImages" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="413-3d-zoi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,14 +83,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="rUu-4L-xhh" kind="relationship" relationship="viewControllers" id="yqf-YN-uLj"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="iEr-Sz-rKm" kind="relationship" relationship="viewControllers" id="eT0-Hg-1qO"/>
-                        <segue destination="rUu-4L-xhh" kind="relationship" relationship="viewControllers" id="yqf-YN-uLj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-653" y="398"/>
+            <point key="canvasLocation" x="-675" y="504"/>
         </scene>
         <!--Home-->
         <scene sceneID="xet-7M-2bD">

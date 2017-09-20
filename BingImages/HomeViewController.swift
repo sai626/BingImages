@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UITableViewController {
+class HomeViewController: UITableViewController {
     
     let data = TestData()
 
@@ -27,18 +27,19 @@ class FirstViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("No of Items \(data.images.count)")
         return (data.images.count)
     }
 
+    /*
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return CGFloat(67 + data.images[indexPath.row].height!)
+        print("Cell height \(indexPath.row)")
+        return 257
     }
-    
+ */
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("bingCell", forIndexPath: indexPath) as! ImageCell
-        cell.createCell(data.images[indexPath.row])
-        print("Cell \(indexPath.row)")
+        cell.setImage(data.images[indexPath.row])
         return cell
     }
 }

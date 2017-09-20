@@ -14,9 +14,14 @@ class ImageCell: UITableViewCell {
     
     @IBOutlet weak var nameOfImage: UILabel!
     @IBOutlet weak var uploadDate: UILabel!
+    @IBOutlet weak var imageViewer: UIImageView!
+    var img: ImageResult?
+    private let MAX_IMAGE_HEIGHT = CGFloat(200)
+    var cellHeight: CGFloat!
+    var request: Request?
     
     func addImage(url: NSURL) {
-        Alamofire.request(.GET, url).responseImage {
+        request = Alamofire.request(.GET, url).responseImage {
             [weak self] response in
             /*
             debugPrint(response)
@@ -24,21 +29,42 @@ class ImageCell: UITableViewCell {
             print(response.request)
             print(response.response)
             debugPrint(response.result)
-            */
+ */
+             
             if let image = response.result.value, strongSelf = self {
-                let imageView = UIImageView(image: image)
-                imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
-                strongSelf.addSubview(imageView)
+                strongSelf.imageViewer.image = image
+                //print("Image Loaded")
             }
  
         }
     }
     
-    func createCell(img: Image){
-        nameOfImage.text = img.name
-        uploadDate.text = "Date"
+    func setImage(img: ImageResult){
+        self.img = img
+        updateUI()
     }
     
     override func prepareForReuse() {
+        img = nil
+        nameOfImage.text = nil
+        uploadDate.text = nil
+        request?.cancel()
     }
+    
+    func updateUI(){
+        nameOfImage.text = img!.name
+        
+        let aspectRatio = CGFloat((img?.height)!)/CGFloat((img?.width)!)
+        var imageWidth = UIScreen.mainScreen().bounds.width
+        var imageHeight = aspectRatio*imageWidth
+        if imageHeight > MAX_IMAGE_HEIGHT {
+            imageHeight = MAX_IMAGE_HEIGHT
+            imageWidth = imageHeight/aspectRatio
+        }
+        print("Height: \(imageHeight)  Width: \(imageWidth)")
+        imageViewer.frame = CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight)
+        cellHeight = 57 + imageHeight
+        addImage(img!.url!)
+    }
+    
 }

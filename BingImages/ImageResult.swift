@@ -9,14 +9,14 @@
 import UIKit
 import SwiftyJSON
 
-class Image{
+class ImageResult{
     
-    var name: String?
-    var date: NSDate?
-    var width: Int?
-    var height: Int?
-    var url: NSURL?
-    var accentColor: UIColor?
+    var name: String!
+    var date: NSDate!
+    var width: Int!
+    var height: Int!
+    var url: NSURL!
+    var accentColor: UIColor!
     var contentURL: NSURL?
     var thumbnailUrl: NSURL?
     var thumbnailWidth: Int?
@@ -24,11 +24,12 @@ class Image{
     var imageSize: Int?
     
     func initializeCellData(imageJson: JSON){
-        name = imageJson["name"].string
-        date = NSDate().dateFromString(imageJson["datePublished"].string)
-        width = imageJson["width"].int
-        height = imageJson["height"].int
+        name = imageJson["name"].stringValue
+        date = NSDate().dateFromString(imageJson["datePublished"].stringValue)
+        width = imageJson["width"].intValue
+        height = imageJson["height"].intValue
         url = NSURL(string: imageJson["webSearchUrl"].stringValue)
+        //print(url.absoluteURL)
         
         if let colorString = imageJson["accentColor"].string {
             let color = Int("0x" + colorString)!

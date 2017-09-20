@@ -23,6 +23,12 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-Yi-KxL">
+                    <rect key="frame" x="0.0" y="57" width="600" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="7sN-5t-Ihd"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -30,10 +36,12 @@
                 <constraint firstItem="bFX-VE-vDC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Jwc-De-1bX"/>
                 <constraint firstItem="3TP-IK-Hb8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="WqH-8r-G8V"/>
                 <constraint firstAttribute="trailing" secondItem="3TP-IK-Hb8" secondAttribute="trailing" constant="20" id="YDx-6b-sKo"/>
+                <constraint firstItem="cMT-Yi-KxL" firstAttribute="top" secondItem="bFX-VE-vDC" secondAttribute="bottom" constant="5" id="ffZ-Bu-vu7"/>
                 <constraint firstItem="3TP-IK-Hb8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="hDY-9x-hPj"/>
                 <constraint firstItem="bFX-VE-vDC" firstAttribute="top" secondItem="3TP-IK-Hb8" secondAttribute="bottom" constant="5" id="wb5-Sg-6J0"/>
             </constraints>
             <connections>
+                <outlet property="imageViewer" destination="cMT-Yi-KxL" id="mwI-EL-imN"/>
                 <outlet property="nameOfImage" destination="3TP-IK-Hb8" id="hPf-Tu-drj"/>
                 <outlet property="uploadDate" destination="bFX-VE-vDC" id="lFY-hz-oDO"/>
             </connections>
