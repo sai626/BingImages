@@ -1,0 +1,6 @@
+framework module Pods_BingImages {
+  umbrella header "Pods-BingImages-umbrella.h"
+
+  export *
+  module * { export * }
+}
