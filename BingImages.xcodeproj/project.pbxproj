@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1F2B5189AE5B3032A0B1BE85 /* Pods_BingImages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72F0485224EB470C55B18A5 /* Pods_BingImages.framework */; };
+		3A152D861F7290AD00EB6606 /* ImageCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A152D851F7290AD00EB6606 /* ImageCollectionController.swift */; };
+		3A152D881F72959100EB6606 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A152D871F72959100EB6606 /* HomeViewController.swift */; };
 		3A418C731F6FD5F90066AE76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A418C721F6FD5F90066AE76 /* AppDelegate.swift */; };
-		3A418C751F6FD5F90066AE76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A418C741F6FD5F90066AE76 /* HomeViewController.swift */; };
 		3A418C771F6FD5F90066AE76 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A418C761F6FD5F90066AE76 /* SecondViewController.swift */; };
 		3A418C7A1F6FD5F90066AE76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A418C781F6FD5F90066AE76 /* Main.storyboard */; };
 		3A418C7C1F6FD5F90066AE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A418C7B1F6FD5F90066AE76 /* Assets.xcassets */; };
@@ -18,17 +19,24 @@
 		3A418C8A1F6FE4950066AE76 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A418C891F6FE4950066AE76 /* ImageCell.swift */; };
 		3A686D491F72630600449C64 /* TestData2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A686D481F72630600449C64 /* TestData2.swift */; };
 		3A771D6D1F70E4FC00EC8469 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D6C1F70E4FC00EC8469 /* UIImageView+DownloadImage.swift */; };
-		3A771D701F70FBC500EC8469 /* ImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D6F1F70FBC500EC8469 /* ImageResult.swift */; };
+		3A771D701F70FBC500EC8469 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D6F1F70FBC500EC8469 /* DataObject.swift */; };
 		3A771D721F70FEDF00EC8469 /* NSDate+stringParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D711F70FEDF00EC8469 /* NSDate+stringParse.swift */; };
 		3A771D741F7118CF00EC8469 /* UIColor+hexCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D731F7118CF00EC8469 /* UIColor+hexCodes.swift */; };
 		3A771D761F712B1800EC8469 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D751F712B1800EC8469 /* TestData.swift */; };
+		3AB04F451F73A039007E7771 /* WebRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04F441F73A039007E7771 /* WebRequests.swift */; };
+		3AB04F471F73B300007E7771 /* MyStoriesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04F461F73B300007E7771 /* MyStoriesCollectionController.swift */; };
+		3AB04F491F73B3E7007E7771 /* MyStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB04F481F73B3E7007E7771 /* MyStoryCell.xib */; };
+		3AB04F4B1F73B5BA007E7771 /* MyStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04F4A1F73B5BA007E7771 /* MyStoryCell.swift */; };
+		3AB04F4D1F73B7C4007E7771 /* MyStoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04F4C1F73B7C4007E7771 /* MyStoryObject.swift */; };
+		3AB04F4F1F73B835007E7771 /* TestProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04F4E1F73B835007E7771 /* TestProfileImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D67B2B1B8E472D508DBFF07 /* Pods-BingImages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingImages.release.xcconfig"; path = "Pods/Target Support Files/Pods-BingImages/Pods-BingImages.release.xcconfig"; sourceTree = "<group>"; };
+		3A152D851F7290AD00EB6606 /* ImageCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionController.swift; sourceTree = "<group>"; };
+		3A152D871F72959100EB6606 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3A418C6F1F6FD5F90066AE76 /* BingImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BingImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A418C721F6FD5F90066AE76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A418C741F6FD5F90066AE76 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3A418C761F6FD5F90066AE76 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3A418C791F6FD5F90066AE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A418C7B1F6FD5F90066AE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,10 +46,16 @@
 		3A418C891F6FE4950066AE76 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		3A686D481F72630600449C64 /* TestData2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData2.swift; sourceTree = "<group>"; };
 		3A771D6C1F70E4FC00EC8469 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
-		3A771D6F1F70FBC500EC8469 /* ImageResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResult.swift; sourceTree = "<group>"; };
+		3A771D6F1F70FBC500EC8469 /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		3A771D711F70FEDF00EC8469 /* NSDate+stringParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+stringParse.swift"; sourceTree = "<group>"; };
 		3A771D731F7118CF00EC8469 /* UIColor+hexCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hexCodes.swift"; sourceTree = "<group>"; };
 		3A771D751F712B1800EC8469 /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		3AB04F441F73A039007E7771 /* WebRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRequests.swift; sourceTree = "<group>"; };
+		3AB04F461F73B300007E7771 /* MyStoriesCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoriesCollectionController.swift; sourceTree = "<group>"; };
+		3AB04F481F73B3E7007E7771 /* MyStoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyStoryCell.xib; sourceTree = "<group>"; };
+		3AB04F4A1F73B5BA007E7771 /* MyStoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryCell.swift; sourceTree = "<group>"; };
+		3AB04F4C1F73B7C4007E7771 /* MyStoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryObject.swift; sourceTree = "<group>"; };
+		3AB04F4E1F73B835007E7771 /* TestProfileImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestProfileImage.swift; sourceTree = "<group>"; };
 		3CA38D979D01F3C143CAA285 /* Pods-BingImages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingImages.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BingImages/Pods-BingImages.debug.xcconfig"; sourceTree = "<group>"; };
 		B72F0485224EB470C55B18A5 /* Pods_BingImages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BingImages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -58,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A152D841F72905C00EB6606 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A152D851F7290AD00EB6606 /* ImageCollectionController.swift */,
+				3AB04F461F73B300007E7771 /* MyStoriesCollectionController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		3A418C661F6FD5F90066AE76 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +102,7 @@
 		3A418C711F6FD5F90066AE76 /* BingImages */ = {
 			isa = PBXGroup;
 			children = (
+				3A152D841F72905C00EB6606 /* Views */,
 				3A771D6E1F70FBA700EC8469 /* Models */,
 				3A771D6B1F70E4E200EC8469 /* Extensions */,
 				3A771D6A1F70E4C300EC8469 /* PrimaryViewControllers */,
@@ -88,6 +112,7 @@
 				3A418C7B1F6FD5F90066AE76 /* Assets.xcassets */,
 				3A418C7D1F6FD5F90066AE76 /* LaunchScreen.storyboard */,
 				3A418C801F6FD5F90066AE76 /* Info.plist */,
+				3AB04F441F73A039007E7771 /* WebRequests.swift */,
 			);
 			path = BingImages;
 			sourceTree = "<group>";
@@ -97,6 +122,8 @@
 			children = (
 				3A418C871F6FDE240066AE76 /* ImageCell.xib */,
 				3A418C891F6FE4950066AE76 /* ImageCell.swift */,
+				3AB04F481F73B3E7007E7771 /* MyStoryCell.xib */,
+				3AB04F4A1F73B5BA007E7771 /* MyStoryCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -105,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				3A418C761F6FD5F90066AE76 /* SecondViewController.swift */,
-				3A418C741F6FD5F90066AE76 /* HomeViewController.swift */,
+				3A152D871F72959100EB6606 /* HomeViewController.swift */,
 			);
 			name = PrimaryViewControllers;
 			sourceTree = "<group>";
@@ -123,9 +150,11 @@
 		3A771D6E1F70FBA700EC8469 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A771D6F1F70FBC500EC8469 /* ImageResult.swift */,
+				3A771D6F1F70FBC500EC8469 /* DataObject.swift */,
 				3A771D751F712B1800EC8469 /* TestData.swift */,
 				3A686D481F72630600449C64 /* TestData2.swift */,
+				3AB04F4C1F73B7C4007E7771 /* MyStoryObject.swift */,
+				3AB04F4E1F73B835007E7771 /* TestProfileImage.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -208,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB04F491F73B3E7007E7771 /* MyStoryCell.xib in Resources */,
 				3A418C7F1F6FD5F90066AE76 /* LaunchScreen.storyboard in Resources */,
 				3A418C881F6FDE240066AE76 /* ImageCell.xib in Resources */,
 				3A418C7C1F6FD5F90066AE76 /* Assets.xcassets in Resources */,
@@ -282,15 +312,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB04F4F1F73B835007E7771 /* TestProfileImage.swift in Sources */,
 				3A686D491F72630600449C64 /* TestData2.swift in Sources */,
+				3AB04F471F73B300007E7771 /* MyStoriesCollectionController.swift in Sources */,
+				3AB04F4B1F73B5BA007E7771 /* MyStoryCell.swift in Sources */,
+				3A152D881F72959100EB6606 /* HomeViewController.swift in Sources */,
 				3A771D761F712B1800EC8469 /* TestData.swift in Sources */,
 				3A418C771F6FD5F90066AE76 /* SecondViewController.swift in Sources */,
-				3A771D701F70FBC500EC8469 /* ImageResult.swift in Sources */,
+				3A771D701F70FBC500EC8469 /* DataObject.swift in Sources */,
+				3AB04F451F73A039007E7771 /* WebRequests.swift in Sources */,
 				3A418C8A1F6FE4950066AE76 /* ImageCell.swift in Sources */,
 				3A418C731F6FD5F90066AE76 /* AppDelegate.swift in Sources */,
 				3A771D741F7118CF00EC8469 /* UIColor+hexCodes.swift in Sources */,
 				3A771D721F70FEDF00EC8469 /* NSDate+stringParse.swift in Sources */,
-				3A418C751F6FD5F90066AE76 /* HomeViewController.swift in Sources */,
+				3A152D861F7290AD00EB6606 /* ImageCollectionController.swift in Sources */,
+				3AB04F4D1F73B7C4007E7771 /* MyStoryObject.swift in Sources */,
 				3A771D6D1F70E4FC00EC8469 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

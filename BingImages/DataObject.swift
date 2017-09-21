@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class ImageResult{
+class DataObject: NSObject {
     
     var name: String!
     var date: NSDate!
@@ -17,22 +17,46 @@ class ImageResult{
     var height: Int!
     var url: NSURL!
     var accentColor: UIColor!
-    var contentURL: NSURL?
+    var webSearchURL: NSURL?
     var thumbnailUrl: NSURL?
     var thumbnailWidth: Int?
     var thumbnailHeight: Int?
     var imageSize: Int?
     
     private let MAX_IMAGE_HEIGHT = CGFloat(200)
-    var imageHeight: CGFloat!
-    var imageWidth: CGFloat!
     
-    func initializeCellData(imageJson: JSON){
+    var imageHeight: CGFloat!{
+        get{
+            let aspectRatio = CGFloat(height)/CGFloat(width)
+            let tempWidth = UIScreen.mainScreen().bounds.width
+            var tempHeight = aspectRatio * tempWidth
+            
+            if tempHeight > MAX_IMAGE_HEIGHT {
+                tempHeight = MAX_IMAGE_HEIGHT
+            }
+            return tempHeight
+        }
+    }
+    
+    var imageWidth: CGFloat!{
+        get{
+            let aspectRatio = CGFloat(height)/CGFloat(width)
+            var tempWidth = UIScreen.mainScreen().bounds.width
+            let tempHeight = aspectRatio * tempWidth
+            
+            if tempHeight > MAX_IMAGE_HEIGHT {
+                tempWidth = MAX_IMAGE_HEIGHT/aspectRatio
+            }
+            return tempWidth
+        }
+    }
+    
+    func parseJSON(imageJson: JSON){
         name = imageJson["name"].stringValue
         date = NSDate().dateFromString(imageJson["datePublished"].stringValue)
         width = imageJson["width"].intValue
         height = imageJson["height"].intValue
-        url = NSURL(string: imageJson["webSearchUrl"].stringValue)
+        url = NSURL(string: imageJson["contentUrl"].stringValue)
         //print(url.absoluteURL)
         
         if let colorString = imageJson["accentColor"].string {
@@ -43,8 +67,8 @@ class ImageResult{
             accentColor = UIColor(colorLiteralRed: Float(red)/255, green: Float(green)/255, blue: Float(blue)/255, alpha: 1)
         }
         
-        if let urlString = imageJson["contentUrl"].string{
-            contentURL = NSURL(string: urlString)
+        if let urlString = imageJson["webSearchUrl"].string{
+            webSearchURL = NSURL(string: urlString)
         }
         
         if let urlString = imageJson["thumbnailUrl"].string{
@@ -59,16 +83,5 @@ class ImageResult{
             imageSize = Int(value[0])
         }
 
-    }
-    
-    func imageSizeCalc(){
-        let aspectRatio = CGFloat(height)/CGFloat(width)
-        imageWidth = UIScreen.mainScreen().bounds.width
-        imageHeight = aspectRatio*imageWidth
-        if imageHeight > MAX_IMAGE_HEIGHT {
-            imageHeight = MAX_IMAGE_HEIGHT
-            imageWidth = imageHeight/aspectRatio
-        }
-        print("Height: \(imageHeight)  Width: \(imageWidth)")
     }
 }
