@@ -16,22 +16,29 @@ class ImageCell: UICollectionViewCell {
     @IBOutlet weak var uploadDate: UILabel!
     @IBOutlet weak var imageViewer: UIImageView!
     var data: DataObject?
+    let cache = ImageCache()
+    
     
     let webRequest = WebRequest()
     var request: Request?
     
-    func addImage(url: NSURL) {
+    func setImageViewer() {
+        //imageViewer.backgroundColor = UIColor.blackColor()
         
-        webRequest.downloadImage(url){
-            [weak self] image in
-            
-            if let image = image, let strongSelf = self {
-                dispatch_async(dispatch_get_main_queue()){
-                    strongSelf.imageViewer.image = image
+        if let image = cache.retriveImage(data!.id) {
+            imageViewer.image = image
+        }else{
+            webRequest.downloadImage(data!.url){
+                [weak self] image in
+                
+                if let image = image, let strongSelf = self {
+                    dispatch_async(dispatch_get_main_queue()){
+                        strongSelf.imageViewer.image = image
+                    }
+                    strongSelf.cache.saveImage(strongSelf.data!.id, image: image)
                 }
             }
         }
-        //print("Requesting image of index \(index!)")
         
     }
     
@@ -52,8 +59,9 @@ class ImageCell: UICollectionViewCell {
     func updateUI(){
         nameOfImage.text = data!.name
         uploadDate.text = "Random Text"
-        imageViewer.frame = CGRect(x: 0, y: 0, width: (data?.imageWidth)!, height: (data?.imageHeight)!)
-        addImage(data!.url!)
+        imageViewer.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: (data?.imageHeight)!)
+        setImageViewer()
     }
+    
     
 }

@@ -16,6 +16,7 @@ class DataObject: NSObject {
     var width: Int!
     var height: Int!
     var url: NSURL!
+    var id: String!
     var accentColor: UIColor!
     var webSearchURL: NSURL?
     var thumbnailUrl: NSURL?
@@ -23,31 +24,18 @@ class DataObject: NSObject {
     var thumbnailHeight: Int?
     var imageSize: Int?
     
-    private let MAX_IMAGE_HEIGHT = CGFloat(200)
+    //private let MAX_IMAGE_HEIGHT = CGFloat(200)
     
     var imageHeight: CGFloat!{
         get{
             let aspectRatio = CGFloat(height)/CGFloat(width)
-            let tempWidth = UIScreen.mainScreen().bounds.width
-            var tempHeight = aspectRatio * tempWidth
-            
-            if tempHeight > MAX_IMAGE_HEIGHT {
-                tempHeight = MAX_IMAGE_HEIGHT
-            }
-            return tempHeight
+            return aspectRatio * UIScreen.mainScreen().bounds.width
         }
     }
     
     var imageWidth: CGFloat!{
         get{
-            let aspectRatio = CGFloat(height)/CGFloat(width)
-            var tempWidth = UIScreen.mainScreen().bounds.width
-            let tempHeight = aspectRatio * tempWidth
-            
-            if tempHeight > MAX_IMAGE_HEIGHT {
-                tempWidth = MAX_IMAGE_HEIGHT/aspectRatio
-            }
-            return tempWidth
+            return UIScreen.mainScreen().bounds.width
         }
     }
     
@@ -57,6 +45,7 @@ class DataObject: NSObject {
         width = imageJson["width"].intValue
         height = imageJson["height"].intValue
         url = NSURL(string: imageJson["contentUrl"].stringValue)
+        id = imageJson["id"].stringValue
         //print(url.absoluteURL)
         
         if let colorString = imageJson["accentColor"].string {

@@ -14,12 +14,12 @@ class WebRequest {
     func downloadImage(url: NSURL, completion: (image: UIImage?)->()) -> Request{
         let request = Alamofire.request(.GET, url).responseImage {
             response in
-            
+            /*
             debugPrint(response)
             print(response.request)
             print(response.response)
             debugPrint(response.result)
-            
+            */
             completion(image: response.result.value)
             
         }

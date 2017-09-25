@@ -12,4 +12,5 @@ class MyStoryObject: NSObject {
     
     var name: String!
     var url: NSURL!
+    var id: String!
 }

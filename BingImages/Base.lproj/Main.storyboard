@@ -8,7 +8,7 @@
         <!--BingImages-->
         <scene sceneID="dnn-qs-dro">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wkF-bI-hvY" customClass="HomeViewController" customModule="BingImages" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wkF-bI-hvY" customClass="HomeViewController" customModule="BingImages" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QAZ-1a-bi5"/>
                         <viewControllerLayoutGuide type="bottom" id="Ch9-MU-BOd"/>
@@ -28,7 +28,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Vxd-ww-YRt">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>

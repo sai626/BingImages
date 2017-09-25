@@ -17,19 +17,26 @@ class MyStoryCell: UICollectionViewCell {
     
     let webRequest = WebRequest()
     var request: Request?
+    var cache = ImageCache()
     
-    func addImage(url: NSURL) {
+    
+    func setProfileImage() {
+        //imageViewer.backgroundColor = UIColor.blackColor()
         
-        webRequest.downloadImage(url){
-            [weak self] image in
-            
-            if let image = image, let strongSelf = self {
-                dispatch_async(dispatch_get_main_queue()){
-                    strongSelf.profile.image = image
+        if let image = cache.retriveImage(data!.id) {
+            profile.image = image
+        }else{
+            webRequest.downloadImage(data!.url){
+                [weak self] image in
+                
+                if let image = image, let strongSelf = self {
+                    dispatch_async(dispatch_get_main_queue()){
+                        strongSelf.profile.image = image
+                    }
+                    strongSelf.cache.saveImage(strongSelf.data!.id, image: image)
                 }
             }
         }
-        //print("Requesting image of index \(index!)")
         
     }
     
@@ -52,7 +59,7 @@ class MyStoryCell: UICollectionViewCell {
         profile.layer.borderColor = UIColor.whiteColor().CGColor
         profile.layer.cornerRadius = profile.frame.size.height/2
         profile.clipsToBounds = true
-        addImage(data!.url!)
+        setProfileImage()
     }
 
 }

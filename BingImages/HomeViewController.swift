@@ -34,14 +34,15 @@ class HomeViewController: UIViewController {
         imageCollectionController.data = testData.data
         imageCollectionView.dataSource = imageCollectionController
         imageCollectionView.delegate = imageCollectionController
-        //imageCollectionView.setContentOffset(<#T##contentOffset: CGPoint##CGPoint#>, animated: <#T##Bool#>)
         
         myStoriesCollectionView.registerNib(UINib(nibName: "MyStoryCell",bundle: nil), forCellWithReuseIdentifier: "storyCell")
         myStoriesCollectionController.data = profileData.data
         myStoriesCollectionView.dataSource = myStoriesCollectionController
         myStoriesCollectionView.delegate = myStoriesCollectionController
         
-        
+        let edgeInsets = UIEdgeInsetsMake(-50, 0, 0, 0)
+        imageCollectionView.contentInset = edgeInsets
+        imageCollectionView.scrollIndicatorInsets = edgeInsets
     }
     
 }

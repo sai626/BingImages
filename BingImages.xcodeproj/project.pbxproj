@@ -23,6 +23,7 @@
 		3A771D721F70FEDF00EC8469 /* NSDate+stringParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D711F70FEDF00EC8469 /* NSDate+stringParse.swift */; };
 		3A771D741F7118CF00EC8469 /* UIColor+hexCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D731F7118CF00EC8469 /* UIColor+hexCodes.swift */; };
 		3A771D761F712B1800EC8469 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A771D751F712B1800EC8469 /* TestData.swift */; };
+		3A96C5B81F78E45C0087A1B1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A96C5B71F78E45C0087A1B1 /* ImageCache.swift */; };
 		3AB04F451F73A039007E7771 /* WebRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04F441F73A039007E7771 /* WebRequests.swift */; };
 		3AB04F471F73B300007E7771 /* MyStoriesCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB04F461F73B300007E7771 /* MyStoriesCollectionController.swift */; };
 		3AB04F491F73B3E7007E7771 /* MyStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB04F481F73B3E7007E7771 /* MyStoryCell.xib */; };
@@ -50,6 +51,7 @@
 		3A771D711F70FEDF00EC8469 /* NSDate+stringParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+stringParse.swift"; sourceTree = "<group>"; };
 		3A771D731F7118CF00EC8469 /* UIColor+hexCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hexCodes.swift"; sourceTree = "<group>"; };
 		3A771D751F712B1800EC8469 /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		3A96C5B71F78E45C0087A1B1 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		3AB04F441F73A039007E7771 /* WebRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRequests.swift; sourceTree = "<group>"; };
 		3AB04F461F73B300007E7771 /* MyStoriesCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoriesCollectionController.swift; sourceTree = "<group>"; };
 		3AB04F481F73B3E7007E7771 /* MyStoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyStoryCell.xib; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		3A418C711F6FD5F90066AE76 /* BingImages */ = {
 			isa = PBXGroup;
 			children = (
+				3A96C5B61F78E4400087A1B1 /* Utilities */,
 				3A152D841F72905C00EB6606 /* Views */,
 				3A771D6E1F70FBA700EC8469 /* Models */,
 				3A771D6B1F70E4E200EC8469 /* Extensions */,
@@ -157,6 +160,14 @@
 				3AB04F4E1F73B835007E7771 /* TestProfileImage.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		3A96C5B61F78E4400087A1B1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A96C5B71F78E45C0087A1B1 /* ImageCache.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		63EBA0552D33CB46AD187693 /* Frameworks */ = {
@@ -314,6 +325,7 @@
 			files = (
 				3AB04F4F1F73B835007E7771 /* TestProfileImage.swift in Sources */,
 				3A686D491F72630600449C64 /* TestData2.swift in Sources */,
+				3A96C5B81F78E45C0087A1B1 /* ImageCache.swift in Sources */,
 				3AB04F471F73B300007E7771 /* MyStoriesCollectionController.swift in Sources */,
 				3AB04F4B1F73B5BA007E7771 /* MyStoryCell.swift in Sources */,
 				3A152D881F72959100EB6606 /* HomeViewController.swift in Sources */,

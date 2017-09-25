@@ -25,8 +25,8 @@ class ImageCollectionController: UIView, UICollectionViewDataSource, UICollectio
     
     //MARK:- Delegate
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let ht = 62 + data[indexPath.row].imageHeight
-        print("Calculating cell size")
+        let ht = 61 + data[indexPath.row].imageHeight
+        //print("Calculating cell size")
         return CGSize(width: UIScreen.mainScreen().bounds.width, height: ht)
     }
 }

@@ -24,7 +24,7 @@ class MyStoriesCollectionController: UIView, UICollectionViewDataSource, UIColle
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         //let ht = 62 + data[indexPath.row].imageHeight
-        print("Calculating cell size")
+        //print("Calculating cell size")
         return CGSize(width: 50, height: 50)
     }
 }
