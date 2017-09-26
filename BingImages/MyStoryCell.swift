@@ -22,7 +22,7 @@ class MyStoryCell: UICollectionViewCell {
     
     func setProfileImage() {
         //imageViewer.backgroundColor = UIColor.blackColor()
-        
+        //print("Setting Profile Image")
         if let image = cache.retriveImage(data!.id) {
             profile.image = image
         }else{
